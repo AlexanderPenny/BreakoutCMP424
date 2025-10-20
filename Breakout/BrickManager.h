@@ -2,6 +2,7 @@
 #include <vector>
 #include "Brick.h"
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 class GameManager;
 
@@ -18,4 +19,8 @@ private:
 
     GameManager* _gameManager;
     static constexpr float TOP_PADDING = 100.0f;
+
+    // ---- Audio ---- //
+    sf::SoundBuffer buffer;
+    sf::Sound sound;
 };

@@ -4,6 +4,9 @@
 BrickManager::BrickManager(sf::RenderWindow* window, GameManager* gameManager)
     : _window(window), _gameManager(gameManager)
 {
+    buffer.loadFromFile("audio/puh.wav");
+    sound.setBuffer(buffer);
+    sound.setPitch(2.f);
 }
 
 void BrickManager::createBricks(int rows, int cols, float brickWidth, float brickHeight, float spacing)
@@ -35,6 +38,9 @@ int BrickManager::checkCollision(sf::CircleShape& ball, sf::Vector2f& direction)
     int collisionResponse = 0;  // set to 1 for horizontal collision and 2 for vertical.
     for (auto& brick : _bricks) {
         if (!brick.getBounds().intersects(ball.getGlobalBounds())) continue;    // no collision, skip.
+
+        
+        sound.play();
 
         sf::Vector2f ballPosition = ball.getPosition();
         float ballY = ballPosition.y + 0.5f * ball.getGlobalBounds().height;
