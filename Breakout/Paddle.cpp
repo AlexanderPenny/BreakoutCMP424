@@ -33,6 +33,13 @@ void Paddle::moveRight(float dt)
     }
 }
 
+// @param newCoords | The new coordinates of the mouse
+// @brief This function moves the paddle to the position of the mouse within an acceptable area of movement
+void Paddle::mouseMoveTo(sf::Vector2f newCoords)
+{
+    _sprite.setPosition(newCoords); // this sets the paddle to the position of the mouse
+}
+
 void Paddle::update(float dt)
 {
     if (_timeInNewSize > 0)
