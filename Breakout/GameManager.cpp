@@ -26,6 +26,9 @@ void GameManager::initialize()
 
     // Create bricks
     _brickManager->createBricks(5, 10, 80.0f, 30.0f, 5.0f);
+
+
+    _window->setMouseCursorVisible(false);
 }
 
 void GameManager::update(float dt)
