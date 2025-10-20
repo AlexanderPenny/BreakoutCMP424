@@ -2,7 +2,14 @@
 
 Time Start: 9:35am 20/10/2025
 
-Time End: 9:43am 20/10/2025
+Time End: 10:07am 20/10/2025 
+Total Time: 42 minutes
+
+
+
+
+
+
 
 # Breakout
 
@@ -23,11 +30,11 @@ fire ball (green)
 
 ## Suggested fixes
 
-* Fix the compiler issues in the code
+* Fix the compiler issues in the code ✅
 
 ## Suggested tasks
 
-* Implement mouse input for pad
+* Implement mouse input for pad ✅
 * Improved VFX (ball trail, paddle hit response, brick particle destruction)
 * Better UI (progress bar rather than timer for countdown).
 * GameLoop
