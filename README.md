@@ -11,7 +11,13 @@ Time Start: 21:53pm 20/10/2025
 
 Time End: 22:36m 20/10/2025
 
-Total Time:
+Total Time: 42 minutes
+
+
+
+Time Start: 8:15am 20/10/2025
+
+Time End: 22:36m 20/10/2025
 
 
 

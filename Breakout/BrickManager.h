@@ -22,5 +22,5 @@ private:
 
     // ---- Audio ---- //
     sf::SoundBuffer buffer;
-    sf::Sound sound;
+    sf::Sound hit;
 };

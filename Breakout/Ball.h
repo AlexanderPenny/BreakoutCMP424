@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 
 class GameManager;  // forward declaration
@@ -26,6 +27,9 @@ private:
 
     GameManager* _gameManager;  // Reference to the GameManager
 
+    // ---- Audio ---- //
+    sf::SoundBuffer buffer;
+    std::vector<sf::Sound>bounce;
 
     static constexpr float RADIUS = 10.0f;      
     static constexpr float VELOCITY = 350.0f;   // for reference.

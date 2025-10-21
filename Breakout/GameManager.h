@@ -15,6 +15,7 @@ public:
     GameManager(sf::RenderWindow* window);
     void initialize();
     void update(float dt);
+    static void playVectorSound(std::vector<sf::Sound> &vector);
     void loseLife();
     void render();
     void levelComplete();

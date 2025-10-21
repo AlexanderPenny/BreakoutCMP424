@@ -100,6 +100,20 @@ void GameManager::update(float dt)
     _powerupManager->update(dt);
 }
 
+// @brief This function is the same as play() for a sound, but allows a vector of sounds to be passed in as a reference so that the user of the function
+// may play multiple sounds simultaneously
+void GameManager::playVectorSound(std::vector<sf::Sound> &vector)
+{
+    for (int i = 0; i < vector.size(), ++i;)
+    {
+        if (vector[i].getStatus() != sf::Sound::Status::Playing) // if the sound variable in the vector is not playing then:
+        {
+            vector[i].play();
+            return;
+        }
+    }
+}
+
 void GameManager::loseLife()
 {
     _lives--;
