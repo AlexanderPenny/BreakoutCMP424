@@ -108,7 +108,6 @@ void GameManager::playVectorSound(std::vector<sf::Sound> &vector)
     {
         if (vector[i].getStatus() != sf::Sound::Status::Playing) // if the sound variable in the vector is not playing then:
         {
-            vector[i].setPitch(0.3*i); // scales with the amount of bounces, this works because if there have been a lot of bounces in short succession, the pitch will increase
             vector[i].play(); // although, this would work better with longer audio files
             return;
         }

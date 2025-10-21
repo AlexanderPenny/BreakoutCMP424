@@ -20,6 +20,7 @@ Ball::Ball(sf::RenderWindow* window, float velocity, GameManager* gameManager)
         bounce[i].setBuffer(buffer);
         bounce[i].setPitch(0.5f);
     }
+
 }
 
 Ball::~Ball()

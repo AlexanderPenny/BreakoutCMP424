@@ -3,6 +3,7 @@
 #include "Brick.h"
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include "Hitmarker.h"
 
 class GameManager;
 

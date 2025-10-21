@@ -41,9 +41,11 @@ int BrickManager::checkCollision(sf::CircleShape& ball, sf::Vector2f& direction)
         if (!brick.getBounds().intersects(ball.getGlobalBounds())) continue;    // no collision, skip.
 
         
+        
         hit.play();
 
         sf::Vector2f ballPosition = ball.getPosition();
+        new Hitmarker(_window, ballPosition); // spawning the hitmarker in
         float ballY = ballPosition.y + 0.5f * ball.getGlobalBounds().height;
         sf::FloatRect brickBounds = brick.getBounds();
 

@@ -25,13 +25,19 @@ private:
     bool _isFireBall;
     float _timeWithPowerupEffect;
 
+    
+
     GameManager* _gameManager;  // Reference to the GameManager
+
+    static constexpr float RADIUS = 10.0f;      
+    static constexpr float VELOCITY = 350.0f;   // for reference.
 
     // ---- Audio ---- //
     sf::SoundBuffer buffer;
     std::vector<sf::Sound>bounce;
 
-    static constexpr float RADIUS = 10.0f;      
-    static constexpr float VELOCITY = 350.0f;   // for reference.
+    // ---- VFX ---- //
+    sf::Font font;
+    sf::Text text;
 };
 
