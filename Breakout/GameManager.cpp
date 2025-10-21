@@ -104,11 +104,12 @@ void GameManager::update(float dt)
 // may play multiple sounds simultaneously
 void GameManager::playVectorSound(std::vector<sf::Sound> &vector)
 {
-    for (int i = 0; i < vector.size(), ++i;)
+    for (int i = 0; i < vector.size()-1, ++i;)
     {
         if (vector[i].getStatus() != sf::Sound::Status::Playing) // if the sound variable in the vector is not playing then:
         {
-            vector[i].play();
+            vector[i].setPitch(0.3*i); // scales with the amount of bounces, this works because if there have been a lot of bounces in short succession, the pitch will increase
+            vector[i].play(); // although, this would work better with longer audio files
             return;
         }
     }

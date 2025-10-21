@@ -17,7 +17,7 @@ Total Time: 42 minutes
 
 Time Start: 8:15am 20/10/2025
 
-Time End: 22:36m 20/10/2025
+Time End:  20/10/2025
 
 
 
@@ -51,7 +51,7 @@ fire ball (green)
 * Better ball physics (Box2D)
 * Leaderboards
 * More ball types (e.g., multiball, sticky ball \[where you shoot the ball from the paddle every time], tiny ball, big ball, brick-tracking ball)
-* Sounds with increasing tone between bounces.
+* Sounds with increasing tone between bounces. 
 * Implement commentary with calls to an LLM such as LLama
 
 # Time Details and Changelist
