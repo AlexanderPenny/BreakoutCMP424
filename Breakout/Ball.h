@@ -35,9 +35,5 @@ private:
     // ---- Audio ---- //
     sf::SoundBuffer buffer;
     std::vector<sf::Sound>bounce;
-
-    // ---- VFX ---- //
-    sf::Font font;
-    sf::Text text;
 };
 

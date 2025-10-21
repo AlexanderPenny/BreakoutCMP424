@@ -18,10 +18,16 @@ private:
     std::vector<Brick> _bricks;
     sf::RenderWindow* _window;
 
+
+    sf::Font _font;
+
     GameManager* _gameManager;
     static constexpr float TOP_PADDING = 100.0f;
 
     // ---- Audio ---- //
     sf::SoundBuffer buffer;
     sf::Sound hit;
+
+    // ----- VFX ----- // 
+    std::vector<Hitmarker> Hitmarkers;
 };

@@ -2,20 +2,16 @@
 #include <SFML/Graphics.hpp>
 
 class Hitmarker {
-
 public:
 
-	Hitmarker(sf::RenderWindow* window, sf::Vector2f spawnPosition);
-	~Hitmarker();
-
-	void update(float dt);
-	void render();
+    Hitmarker(sf::RenderWindow* window, sf::Vector2f spawnPosition, sf::Font *font);
+    ~Hitmarker();
+    void update(float dt);
+    void render(sf::RenderWindow& window);
 
 private:
 
-	sf::Text _text;
-	sf::Font _font;
-	sf::RenderWindow* _window;
-
-
+    sf::Font _font;
+    sf::Text _text;
+    sf::RenderWindow* _window;
 };
