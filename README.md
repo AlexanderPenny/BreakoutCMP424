@@ -17,7 +17,13 @@ Total Time: 42 minutes
 
 Time Start: 8:15am 20/10/2025
 
-Time End:  20/10/2025
+Time End: 10:32am 20/10/2025
+
+Total Time: 2h \& 17m.
+
+Note: ^ Majority of this session was spent trying to implement hitmarkers and fix a collision bug (of which the second was successful, although, done at a compromise).
+
+Total overall time: 3h 41m.
 
 
 
