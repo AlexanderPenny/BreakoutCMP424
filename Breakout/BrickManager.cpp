@@ -48,8 +48,6 @@ int BrickManager::checkCollision(sf::CircleShape& ball, sf::Vector2f& direction)
     for (auto& brick : _bricks) {
         if (!brick.getBounds().intersects(ball.getGlobalBounds())) continue;    // no collision, skip.
 
-        
-        
         hit.play();
 
         sf::Vector2f ballPosition = ball.getPosition();

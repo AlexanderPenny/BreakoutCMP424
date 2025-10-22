@@ -9,6 +9,7 @@ Ball::Ball(sf::RenderWindow* window, float velocity, GameManager* gameManager)
     _sprite.setFillColor(sf::Color::Cyan);
     _sprite.setPosition(0, 300);
 
+    trailManager = new Trail(window, gameManager);
 
     // ---- Audio ---- //
     buffer.loadFromFile("audio/puh.wav");
@@ -29,6 +30,8 @@ Ball::~Ball()
 
 void Ball::update(float dt)
 {
+    _dt = dt;
+
     // check for powerup, tick down or correct
     if (_timeWithPowerupEffect > 0.f)
     {
@@ -106,11 +109,18 @@ void Ball::update(float dt)
     {
         _direction.y *= -1; // Bounce vertically
     }
+
+    // ball trail
+    float radius = _sprite.getRadius(); // This is the radius of the ball
+    trailManager->CreateTrail(_sprite.getPosition()+sf::Vector2f(radius, radius));
+    
 }
 
 void Ball::render()
 {
     _window->draw(_sprite);
+    trailManager->render(_dt);
+    
 }
 
 void Ball::setVelocity(float coeff, float duration)
